@@ -41,7 +41,7 @@ def floor(value):
     return ((value + 200) // 133) * 133 - 200
 
 
-state = {'player': 0}
+state = {'player': 1}
 players = [drawx, drawo]
 
 
@@ -54,6 +54,8 @@ def tap(x, y):
     draw(x, y)
     update()
     state['player'] = not player
+        
+    
 
 
 setup(420, 420, 370, 0)
@@ -61,5 +63,5 @@ hideturtle()
 tracer(False)
 grid()
 update()
-onscreenclick(tap)
+onscreenclick(tap)    
 done()
