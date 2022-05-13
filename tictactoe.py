@@ -8,6 +8,7 @@ Ejercicios
 4. ¿Cómo podrías crear un jugador de computadora?
 """
 
+"""Importamos las librerias"""
 from turtle import update, setup, hideturtle, tracer, onscreenclick, done
 from turtle import up, goto, down, circle
 from freegames import line
@@ -23,16 +24,16 @@ def grid():
 
 def drawx(x, y):
     """Dibuja el jugador X"""
-    line(x, y, x + 133, y + 133)
-    line(x, y + 133, x + 133, y)
+    line(x+25, y+25, x + 100, y + 100)
+    line(x+25, y + 100, x + 100, y+25)
 
 
 def drawo(x, y):
     """Dibuja el jugador O"""
     up()
-    goto(x + 67, y + 5)
+    goto(x + 65, y + 20)
     down()
-    circle(62)
+    circle(50)#diametro del circulo
 
 
 def floor(value):
