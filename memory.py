@@ -5,13 +5,15 @@ Ejercicios:
 2. Decrece el número de fichas a una cuadícula de 4x4.
 3. Detecta cuando todas las fichas sean reveladas.
 4. Centraliza fichas con números de un dígito.
-5. Usa letras en vez de números. 
+5. Usa letras en vez de números.
 
 """
 
-from random import *
-from turtle import *
-
+from random import shuffle
+from turtle import up, goto, down, color, begin_fill, forward, left
+from turtle import end_fill, clear, shape, stamp, write, update
+from turtle import ontimer, setup, addshape, hideturtle, tracer
+from turtle import onscreenclick, done
 from freegames import path
 
 car = path('car.gif')
