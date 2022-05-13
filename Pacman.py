@@ -8,18 +8,18 @@ Ejercicios
 4. Hacer que los fantasmas vayan o más rápido o más lento.
 5. Hacer los fantasmas más inteligentes.
 """
-
-
-from random import choice
-# Librería random, se importa choice para seleccionar
-# Número random de secuencia
-from turtle import *
-# Libería turtle que nos ayuda a manipular objetos
-# (para que haya movimientos)
-from freegames import floor, vector
 # Librería que importa a floor para poder calcular el punto de la
 # izquierda dado un valor, tamaño y offset (desplazamiento total).
 # Vector para poder dar dirección y sentido (magnitudes)
+from freegames import floor, vector
+# Librería random, se importa choice para seleccionar
+# Número random de secuencia
+from random import choice
+# Libería turtle que nos ayuda a manipular objetos
+# (para que haya movimientos)
+from turtle import Turtle, bgcolor, clear, up, goto, dot
+from turtle import update, ontimer, setup, hideturtle, tracer
+from turtle import listen, onkey, done
 
 # Estado del score como diccionario
 state = {'score': 0}
