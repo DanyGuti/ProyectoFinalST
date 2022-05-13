@@ -24,24 +24,24 @@ def grid():
 
 def drawx(x, y):
     """Dibuja el jugador X"""
-    line(x+25, y+25, x + 100, y + 100)
-    line(x+25, y + 100, x + 100, y+25)
+    line(x+25, y+25, x + 100, y + 100)#Posicion de la diagonal 1
+    line(x+25, y + 100, x + 100, y+25)#Posicion de la diagonal 2
 
 
 def drawo(x, y):
     """Dibuja el jugador O"""
     up()
-    goto(x + 65, y + 20)
+    goto(x + 65, y + 20)#Posicion
     down()
     circle(50)#diametro del circulo
 
 
 def floor(value):
     """Redondee el valor a la cuadrícula con tamaño cuadrado 133."""
-    return ((value + 200) // 133) * 133 - 200
+    return ((value + 200) // 133) * 133 - 200#Tamaño de la casilla
 
 
-state = {'player': 1}
+state = {'player': 0}
 players = [drawx, drawo]
 
 
@@ -51,13 +51,12 @@ def tap(x, y):
     y = floor(y)
     player = state['player']
     draw = players[player]
-    draw(x, y)
-    update()
-    state['player'] = not player
-        
+    draw(x, y)#Dibuja el simbolo
+    update()#Sincroniza el trazo
+    state['player'] = not player#Permite 2 jugadores
+
     
-
-
+        
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
