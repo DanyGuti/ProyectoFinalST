@@ -8,8 +8,8 @@ Ejercicios
 4. ¿Cómo podrías crear un jugador de computadora?
 """
 
-from turtle import *
-
+from turtle import update, setup, hideturtle, tracer, onscreenclick, done
+from turtle import up, goto, down, circle
 from freegames import line
 
 
