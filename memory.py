@@ -70,6 +70,9 @@ def draw():
             x, y = xy(count)
             square(x, y)
 
+    if hide == [False] * 64:
+        print("Todos los mosaicos han sido revelados")
+
     mark = state['mark']
 
     if mark is not None and hide[mark]:
